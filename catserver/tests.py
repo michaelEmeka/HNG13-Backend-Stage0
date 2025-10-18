@@ -36,7 +36,7 @@ class TestResponse(unittest.TestCase):
             datetime.time
         )
     def test_invalid_method(self):
-        json_response = requests.post("http://127.0.0.1:8000/me/")
+        json_response = requests.post("http://127.0.0.1:8000/me")
         self.assertEqual(json_response.status_code, 500)
 
 if __name__ == "__main__":
