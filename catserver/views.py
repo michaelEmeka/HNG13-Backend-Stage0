@@ -27,7 +27,8 @@ def home(request):
                     "name": "Michael Onuekwusi",
                     "stack": "Django",
                 },
-                "timestamp": datetime.datetime.now(timezone.utc).time().isoformat(),
+                "timestamp": f"{timezone.now().strftime('%Y-%m-%dT%H:%M:%SZ')}",
+                #"timestamp": datetime.datetime.now(timezone.utc).time().isoformat(),
                 "fact": api_response.json().get("fact")
             }
             response = JsonResponse(json_object, status=200)
