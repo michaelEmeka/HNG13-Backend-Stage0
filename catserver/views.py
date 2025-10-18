@@ -2,8 +2,8 @@ from django.http import JsonResponse
 from django.shortcuts import render
 import json
 import requests
-import datetime
-from django.utils.timezone import timezone
+#import datetime 
+from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
 
 # implement basic logging for debugging
